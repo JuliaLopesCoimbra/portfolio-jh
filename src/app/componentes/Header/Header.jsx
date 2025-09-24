@@ -15,7 +15,9 @@ export default function Header() {
   }
 
   return (
-    <header className="w-full bg-black fixed top-0 left-0 z-50">
+    <header className="w-full  fixed top-0 left-0 z-50" style={{
+    background: "radial-gradient(circle at 50% 20%, #1a1a1a, #000 70%)",
+  }}>
       {/* Container */}
       <div className="relative max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
@@ -34,22 +36,22 @@ export default function Header() {
 
         {/* Nav central (desktop) */}
         <nav className="hidden md:flex space-x-8 absolute left-1/2 -translate-x-1/2">
-          <Link href="#about" className="text-amber-200 hover:text-[#f1bb3b]">
+          <Link href="#about" className="text-amber-500/90 hover:text-[#f1bb3b]">
             Sobre
           </Link>
-          <Link href="#relatos" className="text-amber-200 hover:text-[#f1bb3b]">
+          <Link href="#relatos" className="text-amber-500/90 hover:text-[#f1bb3b]">
             Relatos
           </Link>
-          <Link href="#resultados" className="text-amber-200 hover:text-[#f1bb3b]">
+          <Link href="#resultados" className="text-amber-500/90 hover:text-[#f1bb3b]">
             Resultados
           </Link>
-          <Link href="#planos" className="text-amber-200 hover:text-[#f1bb3b]">
+          <Link href="#planos" className="text-amber-500/90 hover:text-[#f1bb3b]">
             Planos
           </Link>
-          <Link href="#duvidas" className="text-amber-200 hover:text-[#f1bb3b]">
+          <Link href="#duvidas" className="text-amber-500/90 hover:text-[#f1bb3b]">
             Dúvidas
           </Link>
-          <Link href="#more" className="text-amber-200 hover:text-[#f1bb3b]">
+          <Link href="#more" className="text-amber-500/90 hover:text-[#f1bb3b]">
             Contato
           </Link>
         </nav>
@@ -59,7 +61,7 @@ export default function Header() {
           {/* CTA desktop (oculto no mobile) */}
           <button
             onClick={handleClick}
-            className="hidden md:inline-flex items-center gap-2 rounded-md border border-amber-200 px-4 py-2 font-semibold text-amber-200 bg-transparent hover:text-[#eac56d] hover:border-[#eac56d] transition-colors"
+            className="hidden md:inline-flex items-center gap-2 rounded-md border border-amber-500/90 px-4 py-2 font-semibold text-amber-500/90 bg-transparent hover:text-[#eac56d] hover:border-[#eac56d] transition-colors"
           >
             <FaWhatsapp className="text-2xl" />
             Te espero no time
@@ -79,24 +81,26 @@ export default function Header() {
 
       {/* Drawer Mobile */}
       {isOpen && (
-        <div className="md:hidden bg-black shadow-lg border-t">
+        <div className="md:hidden shadow-lg border-t" style={{
+    background: "radial-gradient(circle at 50% 20%, #1a1a1a, #000 70%)",
+  }}>
           <nav className="flex flex-col space-y-4 px-4 py-6">
-            <Link href="#about" className="text-amber-200 hover:text-[#f1bb3b]" onClick={() => setIsOpen(false)}>
+            <Link href="#about" className="text-amber-500/90 hover:text-[#f1bb3b]" onClick={() => setIsOpen(false)}>
               Sobre
             </Link>
-            <Link href="#relatos" className="text-amber-200 hover:text-[#f1bb3b]" onClick={() => setIsOpen(false)}>
+            <Link href="#relatos" className="text-amber-500/90 hover:text-[#1d1d1d]" onClick={() => setIsOpen(false)}>
               Relatos
             </Link>
-            <Link href="#resultados" className="text-amber-200 hover:text-[#f1bb3b]" onClick={() => setIsOpen(false)}>
+            <Link href="#resultados" className="text-amber-500/90 hover:text-[#f1bb3b]" onClick={() => setIsOpen(false)}>
               Resultados
             </Link>
-            <Link href="#planos" className="text-amber-200 hover:text-[#f1bb3b]" onClick={() => setIsOpen(false)}>
+            <Link href="#planos" className="text-amber-500/90 hover:text-[#f1bb3b]" onClick={() => setIsOpen(false)}>
               Planos
             </Link>
-            <Link href="#duvidas" className="text-amber-200 hover:text-[#f1bb3b]" onClick={() => setIsOpen(false)}>
+            <Link href="#duvidas" className="text-amber-500/90 hover:text-[#f1bb3b]" onClick={() => setIsOpen(false)}>
               Dúvidas
             </Link>
-            <Link href="#more" className="text-amber-200 hover:text-[#f1bb3b]" onClick={() => setIsOpen(false)}>
+            <Link href="#more" className="text-amber-500/90 hover:text-[#f1bb3b]" onClick={() => setIsOpen(false)}>
               Contato
             </Link>
           </nav>

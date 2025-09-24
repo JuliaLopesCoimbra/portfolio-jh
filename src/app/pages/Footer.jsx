@@ -31,22 +31,22 @@ export default function Footer() {
 
         {/* Navegação */}
         <nav className="flex flex-col gap-2 text-sm text-neutral-300">
-          <a href="#about" className="hover:text-amber-300 transition">
+          <a href="#about" className="hover:text-amber-500/90 transition">
             Sobre
           </a>
-          <a href="#relatos" className="hover:text-amber-300 transition">
+          <a href="#relatos" className="hover:text-amber-500/90 transition">
             Relatos
           </a>
-          <a href="#resultados" className="hover:text-amber-300 transition">
+          <a href="#resultados" className="hover:text-amber-500/90 transition">
             Resultados
           </a>
-          <a href="#planos" className="hover:text-amber-300 transition">
+          <a href="#planos" className="hover:text-amber-500/90 transition">
             Planos
           </a>
-          <a href="#duvidas" className="hover:text-amber-300 transition">
+          <a href="#duvidas" className="hover:text-amber-500/90 transition">
             Dúvidas
           </a>
-          <a href="#more" className="hover:text-amber-300 transition">
+          <a href="#more" className="hover:text-amber-500/90 transition">
             Mais
           </a>
         </nav>
@@ -57,14 +57,14 @@ export default function Footer() {
           <a
             href="https://wa.me/5516997572671?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20consultoria."
             target="_blank"
-            className="inline-flex items-center gap-2 hover:text-amber-300 transition"
+            className="inline-flex items-center gap-2 hover:text-amber-500/90 transition"
           >
             <FaWhatsapp className="text-lg" />
             WhatsApp
           </a>
           <a
             href="mailto:joaovictorherker@gmail.com"
-            className="inline-flex items-center gap-2 hover:text-amber-300 transition"
+            className="inline-flex items-center gap-2 hover:text-amber-500/90 transition"
           >
             <FaEnvelope className="text-lg" />
             E-mail
@@ -72,7 +72,7 @@ export default function Footer() {
           <a
             href="https://www.instagram.com/joaoherker"
             target="_blank"
-            className="inline-flex items-center gap-2 hover:text-amber-300 transition"
+            className="inline-flex items-center gap-2 hover:text-amber-500/90 transition"
           >
             <FaInstagram className="text-lg" />
             Instagram
@@ -80,7 +80,7 @@ export default function Footer() {
           <a
             href="https://www.youtube.com/@joaovictorherker"
             target="_blank"
-            className="inline-flex items-center gap-2 hover:text-amber-300 transition"
+            className="inline-flex items-center gap-2 hover:text-amber-500/90 transition"
           >
             <FaYoutube className="text-lg" />
             YouTube Channel

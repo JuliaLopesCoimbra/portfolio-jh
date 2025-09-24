@@ -49,7 +49,7 @@ function PatternBG() {
 
 function Pill({ children }) {
   return (
-    <span className="inline-flex items-center gap-2 rounded-full border border-amber-500/60 bg-amber-500/10 px-3 py-1 text-xs tracking-wide text-amber-300">
+    <span className="inline-flex items-center gap-2 rounded-full border border-amber-500/60 bg-amber-500/10 px-3 py-1 text-xs tracking-wide text-amber-500/90">
       {children}
     </span>
   );
@@ -62,7 +62,7 @@ function CTAButtons() {
         onClick={handleClick}
         className={classNames(
           "group inline-flex items-center justify-center gap-2 rounded-2xl border px-5 py-3 text-sm font-medium transition",
-          "border-amber-500 bg-amber-300 text-black hover:bg-transparent hover:text-amber-300"
+          "border-amber-500 bg-amber-400 text-black hover:bg-transparent hover:text-amber-500/90"
         )}
       >
         <FaWhatsapp className="text-lg transition group-hover:scale-110" />
@@ -73,7 +73,7 @@ function CTAButtons() {
         href="#about"
         className={classNames(
           "inline-flex items-center justify-center gap-2 rounded-2xl border px-5 py-3 text-sm font-medium transition",
-          "border-amber-500/60 text-amber-300 hover:border-amber-400 hover:text-amber-200"
+          "border-amber-500/60 text-amber-500/90 hover:border-amber-400 hover:text-amber-200"
         )}
       >
         Saiba Mais
@@ -84,7 +84,9 @@ function CTAButtons() {
 
 const Principal = () => {
   return (
-    <section className="relative isolate overflow-hidden bg-black text-neutral-100">
+    <section className="relative isolate overflow-hidden  text-neutral-100" style={{
+    background: "radial-gradient(circle at 50% 20%, #1a1a1a, #000 70%)",
+  }}>
       <PatternBG />
 
       <div className="mx-auto grid min-h-[calc(100svh-4rem)] w-full max-w-7xl grid-cols-1 items-center gap-10 px-6 pb-16 pt-20 md:grid-cols-2 md:gap-16 md:px-10 lg:pt-24">
@@ -95,13 +97,13 @@ const Principal = () => {
             <Pill>Atendimento personalizado</Pill>
           </div>
 
-          <h1 className="text-balance text-4xl font-semibold leading-tight text-amber-300 sm:text-5xl">
+          <h1 className="text-balance text-4xl font-semibold leading-tight text-amber-500/90 sm:text-5xl">
             Bem-vindo ao ápice da <span className="text-white">nutrição esportiva</span>
           </h1>
 
           <p className="mt-4 max-w-prose text-base/relaxed text-neutral-300">
             Resultados consistentes com estratégia, ciência e acompanhamento de perto. Vamos fazer
-            <span className="text-amber-300"> acontecer</span>.
+            <span className="text-amber-500/90"> acontecer</span>.
           </p>
 
           <CTAButtons />
@@ -119,7 +121,7 @@ const Principal = () => {
         <div className="relative z-10 mx-auto w-full max-w-sm md:max-w-md">
           <div className="relative rounded-3xl border border-amber-500/30 bg-neutral-900/40 p-2 shadow-2xl overflow-visible">
             <img
-              src="/jh/pose.jpeg"
+              src="/jh/joaoBusiness.jpg"
               alt="Profissional de nutrição esportiva"
               className="aspect-[3/4] w-full rounded-2xl object-cover object-top"
             />
@@ -142,7 +144,7 @@ const Principal = () => {
 
 {/* 2. Badge direita (Nutrição e Pós Bodybuilding) */}
 <div className="flex items-center gap-2 absolute right-2 sm:right-0 top-1/2 translate-x-[25%] sm:translate-x-1/3 -translate-y-1/2 rounded-xl sm:rounded-2xl border border-amber-500/30 bg-black/70 backdrop-blur px-2 py-1 sm:px-4 sm:py-2 shadow-xl scale-90 sm:scale-100">
-  <FaGraduationCap className="text-amber-300 text-sm sm:text-base" />
+  <FaGraduationCap className="text-amber-500/90 text-sm sm:text-base" />
   <span className="text-xs sm:text-sm text-neutral-100 text-right">
     Nutrição e Pós graduado<br />em Bodybuilding Coach
   </span>
@@ -158,13 +160,13 @@ const Principal = () => {
       <img src="/avatar/avatar1.jpeg" alt="" className="h-6 w-6 sm:h-8 sm:w-8 rounded-full border border-black object-cover" />
       <img src="/avatar/avatar2.jpeg" alt="" className="h-6 w-6 sm:h-8 sm:w-8 rounded-full border border-black object-cover" />
       <img src="/avatar/avatar3.jpeg" alt="" className="h-6 w-6 sm:h-8 sm:w-8 rounded-full border border-black object-cover" />
-      <div className="grid h-6 w-6 sm:h-8 sm:w-8 place-items-center rounded-full border border-black bg-neutral-800 text-[10px] sm:text-xs text-amber-300">+3</div>
+      <div className="grid h-6 w-6 sm:h-8 sm:w-8 place-items-center rounded-full border border-black bg-neutral-800 text-[10px] sm:text-xs text-amber-500/90">+3</div>
     </div>
 
     {/* texto sempre visível */}
     <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-neutral-100">
-      <FaMedal className="text-amber-300 text-sm sm:text-base" />
-      <span className="whitespace-nowrap">60k+ seguidores</span>
+      <FaMedal className="text-amber-500/90 text-sm sm:text-base" />
+      <span className="whitespace-nowrap">1000+ vidas mudadas</span>
     </div>
   </div>
 </div>

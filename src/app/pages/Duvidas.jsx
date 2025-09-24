@@ -51,7 +51,7 @@ export default function Duvidas() {
       <div className="relative z-10 max-w-4xl mx-auto">
         <header className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-semibold text-white">
-            Dúvidas <span className="text-amber-300">Frequentes</span>
+            Dúvidas <span className="text-amber-500/90">Frequentes</span>
           </h2>
           <p className="mt-4 text-neutral-300">
             Separamos algumas perguntas comuns para te ajudar a entender melhor como funciona o
@@ -71,7 +71,7 @@ export default function Duvidas() {
                 className="flex w-full items-center justify-between px-6 py-4 text-left"
               >
                 <span className="font-medium text-white">{faq.pergunta}</span>
-                <span className="text-amber-300">{open === i ? "−" : "+"}</span>
+                <span className="text-amber-500/90">{open === i ? "−" : "+"}</span>
               </button>
               {open === i && (
                 <div className="px-6 pb-4 text-sm text-neutral-300">{faq.resposta}</div>

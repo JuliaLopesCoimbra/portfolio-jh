@@ -23,6 +23,7 @@ export default function Planos() {
       "Recomendações gerais treino",
     ],
     Trimestral: [
+      "PLANO COM 5% DE DESCONTO",
       "Respostas em 24h",
       "Ebook de Ciclo de Carboidratos",
       "Ebook de Higiene de Sono",
@@ -51,7 +52,9 @@ export default function Planos() {
  
 
   return (
-    <section className="relative bg-black text-neutral-100 py-20 px-6">
+    <section className="relative bg-black text-neutral-100 py-20 px-6 " style={{
+    background: "radial-gradient(circle at 50% 20%, #1a1a1a, #000 70%)",
+  }}>
       {/* brilho dourado */}
       <div
         aria-hidden
@@ -65,7 +68,7 @@ export default function Planos() {
       <div className="relative z-10 max-w-7xl mx-auto">
         <header className="text-center max-w-3xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-semibold text-white">
-            Planos <span className="text-amber-300">e Ofertas</span>
+            Planos <span className="text-amber-500/90">e Ofertas</span>
           </h2>
           <p className="mt-4 text-neutral-300">
             Escolha o formato que mais combina com seus objetivos. Todos os planos incluem
@@ -82,7 +85,7 @@ export default function Planos() {
               className={
                 "rounded-xl px-4 py-2 text-sm border transition " +
                 (periodo === p
-                  ? "border-amber-300 bg-amber-300 text-black shadow"
+                  ? "border-amber-400 bg-amber-400 text-black shadow"
                   : "border-amber-500/30 bg-neutral-900/40 text-neutral-200 hover:border-amber-400/40")
               }
             >
@@ -99,7 +102,7 @@ export default function Planos() {
           {/* foto esquerda */}
           <div className="hidden md:block">
             <img
-              src="/jh/joaoBusiness.jpg"
+              src="/jh/joao7.jpg"
               alt="Foto 1"
               className="rounded-2xl shadow-2xl"
             />
@@ -113,7 +116,7 @@ export default function Planos() {
                 className="flex flex-col rounded-2xl border border-amber-500/30 bg-neutral-900/40 p-6 shadow-2xl transition hover:border-amber-400/40"
               >
                 <div className="flex items-start justify-between gap-3">
-                  <h3 className="text-xl font-semibold text-amber-300">
+                  <h3 className="text-xl font-semibold text-amber-500/90">
                     {plano.titulo}
                   </h3>
                   <span className="rounded-full border border-amber-300/40 bg-black/40 px-3 py-1 text-xs text-amber-200">
@@ -123,20 +126,36 @@ export default function Planos() {
 
                 <p className="mt-3 text-sm text-neutral-300">{plano.descricao}</p>
 
-                <ul className="mt-4 space-y-2 text-sm text-neutral-200">
-                  {inclusoesPorPeriodo[periodo].map((b, j) => (
-                    <li key={j} className="flex items-start gap-2">
-                      <span className="h-2 w-2 mt-1 rounded-full bg-amber-400" />
-                      {b}
-                    </li>
-                  ))}
-                </ul>
+               <ul className="mt-4 space-y-2 text-sm text-neutral-200">
+  {inclusoesPorPeriodo[periodo].map((b, j) => {
+    const destaque =
+      b === "PLANO COM 5% DE DESCONTO" ||
+      b === "ACESSO AO PLANO MENSAL DA MUSCLE CLUB";
+
+    return (
+      <li
+        key={j}
+        className={`flex items-start gap-2 ${
+          destaque ? "text-amber-500/90 font-semibold" : ""
+        }`}
+      >
+        <span
+          className={`h-2 w-2 mt-1 rounded-full ${
+            destaque ? "bg-amber-300" : "bg-amber-400"
+          }`}
+        />
+        {b}
+      </li>
+    );
+  })}
+</ul>
+
 
                 <div className="mt-6">
                   <a
                     href={waLink(plano.titulo)}
                     target="_blank"
-                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-amber-300 bg-amber-300 px-4 py-2.5 text-sm font-medium text-black transition hover:bg-transparent hover:text-amber-300"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-amber-400 bg-amber-400 px-4 py-2.5 text-sm font-medium text-black transition hover:bg-transparent hover:text-amber-500/90"
                   >
                     Quero saber os preços
                   </a>
@@ -148,7 +167,7 @@ export default function Planos() {
           {/* foto direita */}
           <div className="hidden md:block">
             <img
-              src="/jh/joaoBusiness2.jpg"
+              src="/jh/pose.jpeg"
               alt="Foto 2"
               className="rounded-2xl shadow-2xl"
             />
@@ -159,7 +178,7 @@ export default function Planos() {
         <div className="mt-14 text-center">
           <p className="text-sm text-neutral-300">
             Todos os planos podem ser parcelados em até{" "}
-            <span className="font-semibold text-amber-300">12x</span> (com juros).
+            <span className="font-semibold text-amber-500/90">12x</span> (com juros).
           </p>
         </div>
       </div>

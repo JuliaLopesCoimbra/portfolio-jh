@@ -11,7 +11,9 @@ export default function Video() {
 
 
   return (
-    <section className="relative bg-black text-white py-20 px-6">
+    <section className="relative  text-white py-20 px-6" style={{
+    background: "radial-gradient(circle at 50% 20%, #1a1a1a, #000 70%)",
+  }}>
       {/* fundo dourado sutil */}
       <div
         aria-hidden
@@ -23,7 +25,7 @@ export default function Video() {
       />
 
       <div className="relative z-10 max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl font-semibold text-amber-300 drop-shadow mb-2">
+        <h2 className="text-3xl sm:text-4xl font-semibold text-amber-500/90 drop-shadow mb-2">
           Conheça o acompanhamento
         </h2>
         <p className="text-neutral-300 mb-8">Assista ao vídeo</p>
@@ -43,7 +45,7 @@ export default function Video() {
         {/* CTA */}
         <div className="mt-10 flex justify-center">
           <button
-            className="flex items-center justify-center gap-2 rounded-2xl border border-amber-300 bg-amber-300 text-black px-6 py-3 text-sm font-medium transition hover:bg-transparent hover:text-amber-300"
+            className="flex items-center justify-center gap-2 rounded-2xl border border-amber-400 bg-amber-400 text-black px-6 py-3 text-sm font-medium transition hover:bg-transparent hover:text-amber-500/90"
             onClick={handleClick}
           >
             <FaWhatsapp className="text-lg" />

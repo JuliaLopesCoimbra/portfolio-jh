@@ -17,7 +17,7 @@ export default function More() {
   }
 
   return (
-    <section id="more" className="relative bg-black text-neutral-100 py-20 px-6">
+    <section id="more" className="relative  text-neutral-100 py-20 px-6">
       {/* fundo dourado sutil */}
       <div
         aria-hidden
@@ -30,15 +30,15 @@ export default function More() {
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl font-semibold text-white">
-          Comunicação direta com{" "}
-          <span className="text-amber-300">João Herker</span>
+          Comunicação direta {" "}
+          <span className="text-amber-500/90"></span>
         </h2>
 
         {/* lista de benefícios */}
-        <ul className="mt-10 space-y-4 text-left">
+        <ul className="mt-10 space-y-4 text-left w-full mx-auto max-w-xl">
           {beneficios.map((b, i) => (
             <li key={i} className="flex items-start gap-3">
-              <FaCheckCircle className="mt-1 text-amber-400" />
+              <FaCheckCircle className="mt-1 text-amber-500/90" />
               <span className="text-neutral-300">{b}</span>
             </li>
           ))}
@@ -48,7 +48,7 @@ export default function More() {
         <div className="mt-12">
           <a
             onClick={handleClick}
-            className="inline-flex items-center justify-center gap-2 rounded-2xl border border-amber-300 bg-amber-300 px-6 py-3 text-sm font-medium text-black transition hover:bg-transparent hover:text-amber-300"
+            className="inline-flex items-center justify-center gap-2 rounded-2xl border border-amber-400 bg-amber-400 px-6 py-3 text-sm font-medium text-black transition hover:bg-transparent hover:text-amber-500/90"
           >
             <FaWhatsapp className="text-lg" />
             Fale comigo agora

@@ -58,13 +58,13 @@ export default function Relatos() {
       depoimento:
         "Sobre a consultoria… tem sido de grande importância na minha vida. Tanto na questão psicológica quanto física, com seu acompanhamento consigo ter mais clareza em saber onde estou errando para poder melhorar a cada semana",
     },
-     {
-      nome: "Matheus Aguila",
-      foto: "/relatos/relato09.png",
-      titulo: "Triathlon",
-      depoimento:
-        "falta",
-    },
+    //  {
+    //   nome: "Matheus Aguila",
+    //   foto: "/relatos/relato09.png",
+    //   titulo: "Triathlon",
+    //   depoimento:
+    //     "falta",
+    // },
   ];
  function handleClick() {
     window.open(
@@ -87,7 +87,7 @@ export default function Relatos() {
       <div className="relative z-10 max-w-6xl mx-auto">
         <header className="text-center max-w-3xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-semibold text-white">
-            Relatos de <span className="text-amber-300">Clientes</span>
+            Relatos de <span className="text-amber-500/90" >Clientes</span>
           </h2>
           <p className="mt-4 text-neutral-300">
             Histórias reais de quem alcançou seus objetivos com acompanhamento personalizado,
@@ -113,7 +113,7 @@ export default function Relatos() {
               >
                 <path
                   fill="currentColor"
-                  className="text-amber-300"
+                  className="text-amber-500/90"
                   d="M7 11h3v6H5v-4a5 5 0 0 1 5-5v3a2 2 0 0 0-2 2H7zm9 0h3v6h-5v-4a5 5 0 0 1 5-5v3a2 2 0 0 0-2 2h-1z"
                 />
               </svg>
@@ -132,7 +132,7 @@ export default function Relatos() {
 
                 <div className="leading-tight">
                   <div className="font-medium text-white">{r.nome}</div>
-                  <div className="text-xs text-neutral-400">{r.titulo}</div>
+                  {/* <div className="text-xs text-neutral-400">{r.titulo}</div> */}
                 </div>
               </div>
             </article>
@@ -144,7 +144,7 @@ export default function Relatos() {
           <a
              onClick={handleClick}
             target="_blank"
-            className="inline-flex items-center justify-center gap-2 rounded-2xl border border-amber-300 bg-amber-300 px-6 py-3 text-sm font-medium text-black transition hover:bg-transparent hover:text-amber-300"
+            className="inline-flex items-center justify-center gap-2 rounded-2xl border border-amber-400 bg-amber-400 px-6 py-3 text-sm font-medium text-black transition hover:bg-transparent hover:text-amber-500/90"
           >
             Quero fazer parte
           </a>

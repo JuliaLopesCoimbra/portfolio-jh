@@ -12,21 +12,22 @@ import AcompanhamentoSection from "./pages/ResultsHimSelf";
 
 export default function Home() {
   return (
-    <>  
-    <Header />
-    <main className="pt-16">
+    <>
+      <Header />
+      <main className="pt-16">
         <Principal />
         <Video />
         <AcompanhamentoSection />
         <About />
+        <More />
         <Relatos />
         <Resultados />
         <Planos />
         <Duvidas />
-        <More />
         <Footer />
       </main>
     </>
   );
 }
-// resultados corpo cortando
+//fundo dourado na parte de controle das respostas semanais
+//colocar um popup check amarelo/dourado tipo do darklab nas fotos Ja fui obeso, ja fui falso magro
