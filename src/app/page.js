@@ -29,5 +29,5 @@ export default function Home() {
     </>
   );
 }
-//fundo dourado na parte de controle das respostas semanais
-//colocar um popup check amarelo/dourado tipo do darklab nas fotos Ja fui obeso, ja fui falso magro
+
+//colocar video

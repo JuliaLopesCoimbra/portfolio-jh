@@ -33,6 +33,7 @@ export default function Planos() {
     ],
     Semestral: [
       "ACESSO AO PLANO MENSAL DA MUSCLE CLUB",
+      "PLANO COM 7% DE DESCONTO",
       "Respostas em 24h",
       "Ebook de Ciclo de Carboidratos",
       "Ebook de Higiene de Sono",
@@ -130,7 +131,9 @@ export default function Planos() {
   {inclusoesPorPeriodo[periodo].map((b, j) => {
     const destaque =
       b === "PLANO COM 5% DE DESCONTO" ||
-      b === "ACESSO AO PLANO MENSAL DA MUSCLE CLUB";
+      b === "ACESSO AO PLANO MENSAL DA MUSCLE CLUB" 
+      ||
+      b === "PLANO COM 7% DE DESCONTO";
 
     return (
       <li

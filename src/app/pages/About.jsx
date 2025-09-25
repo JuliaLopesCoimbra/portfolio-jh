@@ -3,8 +3,8 @@
 export default function About() {
   return (
     <section id="about" className="relative  text-neutral-100 py-20 px-6" style={{
-    background: "radial-gradient(circle at 50% 20%, #1a1a1a, #000 70%)",
-  }}>
+      background: "radial-gradient(circle at 50% 20%, #1a1a1a, #000 70%)",
+    }}>
       {/* brilho sutil dourado */}
       <div
         aria-hidden
@@ -23,7 +23,7 @@ export default function About() {
           </h2>
           <p className="mt-4 text-neutral-300">
             Pare de se culpar: o problema nunca foi você!
-Protocolos genéricos e difíceis de seguir só atrapalham sua evolução.
+            Protocolos genéricos e difíceis de seguir só atrapalham sua evolução.
 
           </p>
           <p className="mt-4 text-neutral-300">
@@ -50,8 +50,8 @@ Protocolos genéricos e difíceis de seguir só atrapalham sua evolução.
           <article className="grid gap-6 md:grid-cols-2 md:gap-10 items-start">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/60 bg-amber-500/10 px-3 py-1 text-sm sm:text-base tracking-wide text-amber-500/90">
-  1 — Anamnese Online + Fotos
-</div>
+                1 — Anamnese Online + Fotos
+              </div>
 
               <h4 className="mt-3 text-lg font-semibold">Tudo começa entendendo você</h4>
               <p className="mt-3 text-neutral-300">
@@ -108,21 +108,38 @@ Protocolos genéricos e difíceis de seguir só atrapalham sua evolução.
 
               </p>
             </div>
-           
+
           </article>
 
           {/* Evolução */}
-          <article className="grid gap-6 md:grid-cols-2 md:gap-10 items-start">
+          <article className="relative grid gap-6 md:grid-cols-2 md:gap-10 items-start
+          rounded-2xl border border-amber-400/40 
+  shadow-[0_8px_20px_rgba(251,191,36,0.4)]  backdrop-blur-sm p-6" 
+          style={{
+           
+            background: "radial-gradient(circle at 50% 20%, #1a1a1a, #000 70%)"
+          }}
+          >
+            {/* fundo radial minimalista */}
+
+
             <div className="order-1 md:order-1">
-              <img src="/consultoria/consultoria06.jpeg" alt="Acompanhamento da evolução" className="rounded-xl border border-amber-500/30 shadow-2xl w-full" />
+              <img
+                src="/consultoria/consultoria06.jpeg"
+                alt="Acompanhamento da evolução"
+                className="rounded-xl  shadow-2xl w-full"
+              />
             </div>
+
             <div className="grid grid-cols-1 gap-4">
-              {/* <img src="/consultoria/consultoria04.jpeg" alt="Revisão semanal" className="rounded-xl border border-amber-500/30 shadow-2xl" /> */}
-              <img src="/consultoria/consultoria05.jpeg" alt="Revisão semanal 2" className=" w-2/4 mx-auto rounded-xl border border-amber-500/30 shadow-2xl" />
-                
+              <img
+                src="/consultoria/consultoria05.jpeg"
+                alt="Revisão semanal 2"
+                className="rounded-xl  shadow-2xl w-3/4 mx-auto"
+              />
             </div>
-            
           </article>
+
 
           {/* 4 - Calculadora de substituições */}
           <article className="grid gap-6 md:grid-cols-2 md:gap-10 items-start">
@@ -142,7 +159,7 @@ Protocolos genéricos e difíceis de seguir só atrapalham sua evolução.
               <img src="/consultoria/consultoria09.jpeg" alt="Calculadora 3" className="rounded-xl border border-amber-500/30 shadow-2xl" />
               {/* <img src="/consultoria/consultoria10.jpeg" alt="Calculadora 4" className="rounded-xl border border-amber-500/30 shadow-2xl" /> */}
             </div>
-                          <p className="text-amber-500/90">🔓 Antes mesmo de você fechar a consultoria, já estou te entregando uma vantagem exclusiva: acesso à calculadora inteligente para usar no seu dia a dia.</p>
+            <p className="text-amber-500/90">🔓 Antes mesmo de você fechar a consultoria, já estou te entregando uma vantagem exclusiva: acesso à calculadora inteligente para usar no seu dia a dia.</p>
 
             <a
               href="https://quantocomer.com.br/joao/"

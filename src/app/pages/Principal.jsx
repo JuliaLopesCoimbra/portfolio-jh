@@ -118,10 +118,14 @@ const Principal = () => {
         </div>
 
         {/* Imagem */}
-        <div className="relative z-10 mx-auto w-full max-w-sm md:max-w-md">
-          <div className="relative rounded-3xl border border-amber-500/30 bg-neutral-900/40 p-2 shadow-2xl overflow-visible">
+        <div className="relative z-10 mx-auto w-full max-w-sm md:max-w-md"
+        >
+          <div className="relative rounded-3xl border border-amber-500/30 bg-neutral-900/40 p-2 shadow-2xl overflow-visible"style={{
+  //  background: "radial-gradient(circle at 50% 20%, rgba(245, 158, 11, 0.5) 3%, #000 97%)",
+}}
+>
             <img
-              src="/jh/joaoBusiness.jpg"
+              src="/jh/joaoPrincipal.png"
               alt="Profissional de nutrição esportiva"
               className="aspect-[3/4] w-full rounded-2xl object-cover object-top"
             />
@@ -152,7 +156,9 @@ const Principal = () => {
 
 
             {/* 3. Badge inferior (avatares + métrica) */}
-       <div className="absolute left-1/2 bottom-2 -translate-x-1/2 translate-y-1/2 rounded-2xl border border-amber-500/30 bg-black/70 backdrop-blur px-3 py-2 shadow-xl w-[65vw] sm:w-auto">
+       <div className="absolute left-1/2 bottom-2 -translate-x-1/2 translate-y-1/2 
+  rounded-2xl border border-amber-500/30 bg-black/70 backdrop-blur 
+  px-3 py-2 shadow-xl w-[65vw] sm:w-[320px]">
   <div className="flex flex-col items-center gap-1 sm:flex-row sm:gap-3">
     
     {/* grupo de avatares */}

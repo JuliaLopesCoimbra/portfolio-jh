@@ -1,5 +1,6 @@
 "use client";
-import { FaGraduationCap } from "react-icons/fa";
+
+import { FaDrumstickBite, FaDumbbell } from "react-icons/fa";
 
 export default function AcompanhamentoSection({
   images = [
@@ -82,32 +83,38 @@ export default function AcompanhamentoSection({
                   ${src === "/jh/joao3.jpg" ? "object-[center_30%]" : ""}`}
               />
 
-              {/* ===== BADGES CONDICIONAIS ===== */}
-              {/* Badge esquerda — DarkLab (aparece somente no joao1.jpg) */}
-              {src === "/jh/joao1.jpg" && (
-                <div className="flex items-center gap-2 absolute left-2 sm:left-0 top-1/3 -translate-x-[20%] sm:-translate-x-1/2 rounded-xl sm:rounded-2xl border border-amber-500/30 bg-black/70 backdrop-blur px-2 py-1 sm:px-4 sm:py-2 shadow-xl scale-90 sm:scale-100">
-                  <div className="flex h-8 w-8 sm:h-12 sm:w-12 items-center justify-center rounded-md bg-white">
-                    <img
-                      src="/logo/dark.png"
-                      alt="Logo DarkLab"
-                      className="h-6 w-6 sm:h-10 sm:w-10 object-contain"
-                    />
-                  </div>
-                  <span className="text-xs sm:text-sm text-neutral-100">Atleta DarkLab</span>
-                </div>
-              )}
+        {/* BADGE - Já fui obeso */}
+{src === "/jh/joao1.jpg" && (
+  <div className="absolute z-10 left-[5%] top-[90%] -translate-y-1/2 flex items-center gap-2 rounded-xl border border-amber-400/40 bg-amber-500/20 backdrop-blur px-3 py-1.5 shadow-xl">
+    <FaDrumstickBite className="text-amber-400 text-sm sm:text-base" />
+    <span className="text-xs sm:text-sm text-white font-medium">
+      Já fui obeso
+    </span>
+  </div>
+)}
 
-              {/* Badge direita — Graduação (aparece somente no joao2.jpg) */}
-              {src === "/jh/joao2.jpg" && (
-                <div className="flex items-center gap-2 absolute right-2 sm:right-0 top-1/2 translate-x-[25%] sm:translate-x-1/3 -translate-y-1/2 rounded-xl sm:rounded-2xl border border-amber-500/30 bg-black/70 backdrop-blur px-2 py-1 sm:px-4 sm:py-2 shadow-xl scale-90 sm:scale-100">
-                  <FaGraduationCap className="text-amber-500/90 text-sm sm:text-base" />
-                  <span className="text-xs sm:text-sm text-neutral-100 text-right">
-                    Nutrição e Pós graduado
-                    <br />em Bodybuilding Coach
-                  </span>
-                </div>
-              )}
-              {/* ===== /BADGES CONDICIONAIS ===== */}
+{/* BADGE - Já fui falso magro */}
+{src === "/jh/joao2.jpg" && (
+  <div
+  className="
+    absolute z-10 right-[10%]
+    bottom-[85%] sm:bottom-[90%]   /* mobile = 80%, desktop = 90% */
+    flex items-center gap-2 
+    rounded-lg sm:rounded-xl        /* badge menor no celular */
+    border border-amber-400/40 
+    bg-amber-500/20 backdrop-blur 
+    px-2 py-1 sm:px-3 sm:py-1.5     /* padding menor no celular */
+    shadow-xl
+  "
+>
+   <FaDumbbell className="text-amber-400 text-xs sm:text-sm" />
+  <span className="text-[10px] sm:text-xs text-white font-medium">
+    Já fui falso magro
+  </span>
+</div>
+
+)}
+
             </div>
           ))}
         </div>
