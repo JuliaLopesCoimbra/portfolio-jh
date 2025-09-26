@@ -1,19 +1,24 @@
 "use client";
+import { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function Video() {
-  function handleClick() {
+  const [open, setOpen] = useState(false);
+
+  function handleClickWhatsApp() {
     window.open(
       "https://wa.me/5516997572671?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20consultoria.",
       "_blank"
     );
   }
 
-
   return (
-    <section className="relative  text-white py-20 px-6" style={{
-    background: "radial-gradient(circle at 50% 20%, #1a1a1a, #000 70%)",
-  }}>
+    <section
+      className="relative text-white py-20 px-6"
+      style={{
+        background: "radial-gradient(circle at 50% 20%, #1a1a1a, #000 70%)",
+      }}
+    >
       {/* fundo dourado sutil */}
       <div
         aria-hidden
@@ -30,23 +35,56 @@ export default function Video() {
         </h2>
         <p className="text-neutral-300 mb-8">Assista ao vídeo</p>
 
-        {/* vídeo responsivo */}
-        <div className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-2xl border border-amber-500/30">
-          <video
-            className="w-full h-auto object-cover"
-            src="/video/video.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
+        {/* Teaser */}
+        <div
+          className="relative w-full max-w-sm mx-auto overflow-hidden rounded-2xl border border-amber-500/30 cursor-pointer"
+          style={{ aspectRatio: "9 / 16" }}
+          onClick={() => setOpen(true)}
+        >
+          <iframe
+            className="absolute inset-0 w-full h-full pointer-events-none"
+            src="https://www.youtube.com/embed/o8SiHZzthbM?autoplay=1&mute=1&loop=1&playlist=o8SiHZzthbM&playsinline=1&modestbranding=1&controls=0&disablekb=1&iv_load_policy=3"
+            title="YouTube teaser"
+            frameBorder="0"
+            allow="autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
           />
+          <div className="absolute inset-0 bg-transparent" />
         </div>
+
+        {/* Modal com player */}
+       {open && (
+  <div
+    className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+    onClick={() => setOpen(false)}
+  >
+    <div
+      className="relative w-full max-w-sm aspect-[9/16] rounded-xl overflow-hidden bg-black"
+      onClick={(e) => e.stopPropagation()}
+    >
+      {/* <button
+        onClick={() => setOpen(false)}
+        className="absolute top-2 right-2 z-10 rounded-full  px-3 py-1 text-black text-sm"
+      >
+        ✕
+      </button> */}
+      <iframe
+        className="absolute inset-0 w-full h-full"
+        src="https://www.youtube.com/embed/o8SiHZzthbM?autoplay=1&controls=1&modestbranding=1&rel=0"
+        title="YouTube player"
+        frameBorder="0"
+        allow="autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      />
+    </div>
+  </div>
+)}
+
 
         {/* CTA */}
         <div className="mt-10 flex justify-center">
           <button
             className="flex items-center justify-center gap-2 rounded-2xl border border-amber-400 bg-amber-400 text-black px-6 py-3 text-sm font-medium transition hover:bg-transparent hover:text-amber-500/90"
-            onClick={handleClick}
+            onClick={handleClickWhatsApp}
           >
             <FaWhatsapp className="text-lg" />
             Fale comigo
