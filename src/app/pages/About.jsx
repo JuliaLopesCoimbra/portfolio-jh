@@ -1,11 +1,40 @@
 "use client";
+import { UtensilsCrossed,  Camera, ClipboardList } from "lucide-react";
 
 export default function About() {
+  const items = [
+    {
+       title: "Meu diferencial",
+  subtitle:
+    "Personalização real, revisão constante e ferramentas que aumentam sua independência. Não trabalho com protocolos prontos ou genéricos: cada plano é desenvolvido de acordo com sua rotina, preferências, histórico e objetivos.",
+  icon: UtensilsCrossed,
+    },
+   {
+  title: "Anamnese Online + Fotos",
+  subtitle: [
+    "Pagamento confirmado → acesso imediato ao questionário",<br></br>,
+    "Rotina, treino, sono e preferências → tudo levado em conta",<br></br>,
+    "Fotos do físico → para análise completa",<br></br>,
+    "Personalização de verdade começa aqui!",
+  ],
+  icon: Camera,
+},
+    {
+      title: "Montagem do seu protocolo",
+      subtitle:
+        "Nada de copiar e colar: em até 3 dias úteis você recebe um protocolo 100% personalizado. Tudo pelo app WebDiet, com listas de substituições para manter variedade e praticidade.",
+      icon: ClipboardList,
+      extraImage: "/consultoria/consultoria03.png", // coloque aqui o caminho da imagem
+    },
+  ];
   return (
-    <section id="about" className="relative  text-neutral-100 py-20 px-6" style={{
-      background: "radial-gradient(circle at 50% 20%, #1a1a1a, #000 70%)",
-    }}>
-      {/* brilho sutil dourado */}
+    <section
+      id="about"
+      className="relative text-neutral-100 py-20 px-6"
+      style={{
+        background: "radial-gradient(circle at 50% 20%, #1a1a1a, #000 70%)",
+      }}
+    >
       <div
         aria-hidden
         className="absolute inset-0 opacity-20"
@@ -14,9 +43,40 @@ export default function About() {
             "radial-gradient(circle at 20% 10%, rgba(242,175,19,0.15), transparent 55%)",
         }}
       />
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        {items.map(({ title, subtitle, icon: Icon, extraImage }, idx) => (
+          <div
+            key={idx}
+            className="flex flex-col items-center text-center rounded-2xl bg-neutral-900/50 p-8 shadow-lg border border-neutral-800 hover:shadow-amber-500/10 transition"
+          >
+            {/* Ícone */}
+            <div className="flex items-center justify-center h-14 w-14 rounded-full bg-gradient-to-br from-amber-600 to-amber-400 mb-5">
+              <Icon className="h-7 w-7 text-white" />
+            </div>
+
+            {/* Título */}
+            <h3 className="text-lg font-semibold text-white">{title}</h3>
+             {/* Imagem extra apenas no card Montagem do protocolo */}
+            {extraImage && (
+              <img
+                src={extraImage}
+                alt="Fluxo do protocolo"
+                className="mt-6 w-3/4 mx-auto"
+              />
+            )}
+
+            {/* Subtítulo */}
+            <p className="mt-2 text-sm text-neutral-300 leading-relaxed">
+              {subtitle}
+            </p>
+
+           
+          </div>
+        ))}
+      </div>
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Hero texto */}
-        <header className="max-w-3xl">
+        {/* <header className="max-w-3xl">
           <h2 className="text-3xl sm:text-4xl font-semibold text-white leading-tight">
             Cansado(a) de não conseguir{" "}
             <span className="text-amber-500/90">seguir a dieta</span> que te passaram?
@@ -29,25 +89,25 @@ export default function About() {
           <p className="mt-4 text-neutral-300">
             Na consultoria, você recebe um plano personalizado, prático e eficiente, que se adapta ao seu dia a dia. Assim, fica mais fácil ganhar massa, perder gordura, melhorar performance e alcançar seus objetivos sem abrir mão do bem-estar.
           </p>
-        </header>
+        </header> */}
 
         {/* divisor */}
         <div className="my-10 h-px bg-gradient-to-r from-transparent via-amber-500/40 to-transparent" />
 
         {/* Diferencial */}
-        <section className="space-y-2">
+        {/* <section className="space-y-2">
           <h3 className="text-xl sm:text-2xl font-medium">
             <span className="text-amber-500/90">Qual é o meu diferencial?</span>
           </h3>
           <p className="text-neutral-300">
             Personalização real, revisão constante e ferramentas que aumentam sua independência.
           </p>
-        </section>
+        </section> */}
 
         {/* Etapas */}
         <section className="mt-10 space-y-16">
           {/* 1 - Anamnese */}
-          <article className="grid gap-6 md:grid-cols-2 md:gap-10 items-start">
+          {/* <article className="grid gap-6 md:grid-cols-2 md:gap-10 items-start">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/60 bg-amber-500/10 px-3 py-1 text-sm sm:text-base tracking-wide text-amber-500/90">
                 1 — Anamnese Online + Fotos
@@ -68,7 +128,7 @@ export default function About() {
           </article>
 
           {/* 2 - Montagem do protocolo */}
-          <article className="grid gap-6 md:grid-cols-2 md:gap-10 items-start">
+          {/* <article className="grid gap-6 md:grid-cols-2 md:gap-10 items-start">
             <div className="order-2 md:order-1 md:col-span-1 col-span-2">
               <img
                 src="/consultoria/consultoria03.png"
@@ -87,14 +147,14 @@ export default function About() {
                 📲 Tudo pelo app WebDiet, com listas de substituições para manter variedade e praticidade.
               </p>
             </div>
-          </article>
+          </article>  */}
 
 
           {/* 3 - Revisão semanal */}
-          <article className="grid gap-6 md:grid-cols-2 md:gap-10 items-start">
+          <article className="grid gap-6 md:grid-cols-1 md:gap-10 items-start">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/60 bg-amber-500/10 px-3 py-1 text-sm sm:text-base tracking-wide text-amber-500/90">
-                3 — Revisão semanal
+                Revisão semanal
               </div>
               <h4 className="mt-3 text-lg font-semibold">Acompanhamento de verdade</h4>
               <p className="mt-3 text-neutral-300">
@@ -145,7 +205,7 @@ export default function About() {
           <article className="grid gap-6 md:grid-cols-2 md:gap-10 items-start">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/60 bg-amber-500/10 px-3 py-1 text-sm sm:text-base tracking-wide text-amber-500/90">
-                4 — Calculadora de substituições
+                Calculadora de substituições
               </div>
               <h4 className="mt-3 text-lg font-semibold">Flexibilidade com inteligência</h4>
               <p className="mt-3 text-neutral-300">

@@ -1,8 +1,32 @@
 "use client";
 
 import { FaDrumstickBite, FaDumbbell } from "react-icons/fa";
+import { Dumbbell, Users, Flame, HeartPulse } from "lucide-react";
 
+ const items = [
+    {
+      title: "Recomposição corporal",
+      subtitle: "Equilibre massa magra e gordura corporal de forma saudável.",
+      icon: Dumbbell,
+    },
+    {
+      title: "Para atletas e não atletas",
+      subtitle: "Planos adaptados ao seu nível de prática, do iniciante ao avançado.",
+      icon: Users,
+    },
+    {
+      title: "Emagrecimento e definição",
+      subtitle: "Estratégias eficazes para reduzir gordura e ganhar contornos.",
+      icon: Flame,
+    },
+    {
+      title: "Hipertrofia e qualidade de vida",
+      subtitle: "Cresça em massa muscular sem abrir mão do bem-estar.",
+      icon: HeartPulse,
+    },
+  ];
 export default function AcompanhamentoSection({
+  
   images = [
     "/jh/joao1.jpg",
     "/jh/joao2.jpg",
@@ -10,7 +34,7 @@ export default function AcompanhamentoSection({
     "/jh/pose.jpeg",
     "/jh/joao5.jpg",
   ],
-}) {
+},) {
   return (
     <section className="relative text-neutral-100 py-16 px-6">
       {/* brilho sutil */}
@@ -25,44 +49,51 @@ export default function AcompanhamentoSection({
 
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-start">
         {/* TEXTOS — ESQUERDA */}
-        <div className="max-w-xl">
-          <p className="uppercase tracking-widest text-amber-500/90/90 text-xs mb-2">
-            Dentro do Acompanhamento
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-semibold text-white">
-            Eu posso te ajudar
-          </h2>
+      <div className="max-w-xl">
+      <p className="uppercase tracking-widest text-amber-500/90 text-xs mb-2">
+        Dentro do Acompanhamento
+      </p>
+      <h2 className="text-3xl sm:text-4xl font-semibold text-white">
+        Eu posso te ajudar
+      </h2>
 
-          <ul className="mt-6 space-y-3">
-            {[
-              "Recomposição corporal;",
-              "Para atletas e não atletas;",
-              "Emagrecimento e definição;",
-              "Hipertrofia e qualidade de vida;",
-            ].map((item, idx) => (
-              <li key={idx} className="flex items-start gap-3 text-neutral-200">
-                <span className="mt-2 h-2 w-2 rounded-full bg-amber-400 shrink-0" />
-                <span className="leading-relaxed">{item}</span>
-              </li>
-            ))}
-          </ul>
+      <div className="relative mt-6">
+        <ul className="space-y-8">
+          {items.map(({ title, subtitle, icon: Icon }, idx) => (
+            <li key={idx} className="relative flex gap-4">
+              {/* Linha vertical cinza (não aparece no último item) */}
+              {idx !== items.length - 1 && (
+                <span className="absolute left-5 top-8 h-full w-px bg-neutral-700"></span>
+              )}
 
-          <p className="mt-6 text-sm text-neutral-400">
-            Acompanhamento próximo, ajustes estratégicos e plano evolutivo focado nos seus
-            objetivos e rotina.
-          </p>
+              {/* Ícone */}
+              <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900 border border-neutral-700">
+                <Icon className="h-5 w-5 text-amber-400" />
+              </div>
 
-          {/* CTA opcional */}
-          <div className="mt-8">
-            <a
-              href="https://wa.me/5516997572671?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20acompanhamento."
-              target="_blank"
-              className="inline-flex items-center justify-center gap-2 rounded-xl border border-amber-400 bg-amber-400 px-5 py-3 text-sm font-medium text-black transition hover:bg-transparent hover:text-amber-500/90"
-            >
-              Falar sobre o acompanhamento
-            </a>
-          </div>
-        </div>
+              {/* Textos */}
+              <div>
+                <h3 className="text-lg font-semibold text-white">{title}</h3>
+                <p className="text-sm text-neutral-300 leading-relaxed mt-1">
+                  {subtitle}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* CTA */}
+      <div className="mt-10">
+        <a
+          href="https://wa.me/5516997572671?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20acompanhamento."
+          target="_blank"
+          className="inline-flex items-center justify-center gap-2 rounded-xl border border-amber-400 bg-amber-400 px-5 py-3 text-sm font-medium text-black transition hover:bg-transparent hover:text-amber-500/90"
+        >
+          Falar sobre o acompanhamento
+        </a>
+      </div>
+    </div>
 
         {/* FOTOS — DIREITA */}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
