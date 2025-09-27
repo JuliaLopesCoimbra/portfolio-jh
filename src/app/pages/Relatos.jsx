@@ -58,13 +58,13 @@ export default function Relatos() {
       depoimento:
         "Sobre a consultoria… tem sido de grande importância na minha vida. Tanto na questão psicológica quanto física, com seu acompanhamento consigo ter mais clareza em saber onde estou errando para poder melhorar a cada semana",
     },
-    //  {
-    //   nome: "Matheus Aguila",
-    //   foto: "/relatos/relato09.png",
-    //   titulo: "Triathlon",
-    //   depoimento:
-    //     "falta",
-    // },
+     {
+      nome: "Rafael Castro",
+      foto: "/relatos/relato09.png",
+      titulo: "Triathlon",
+      depoimento:
+        "Opa João, tudo bem? Passando aqui pra deixar um feedback de como tá sendo o processo! Sem dúvidas, essa é a melhor dieta que já tive. Consigo comer as coisas que gosto e, ao mesmo tempo, perder peso e ganhar massa. Já foram mais de 8 kg e continuo definindo cada vez mais. Fora as fichas de treino, que também me ajudam muito. Realmente, só agradecer… você é foda, irmão! Tmj demais!",
+    },
   ];
  function handleClick() {
     window.open(

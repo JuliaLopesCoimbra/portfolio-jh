@@ -8,6 +8,8 @@ export default function AntesDepois() {
     {   antes: "/resultados/person3before.jpg", depois: "/resultados/person3after.jpg" },
    {   antes: "/resultados/person4before.jpg", depois: "/resultados/person4after.jpg" },
    {   antes: "/resultados/person5before.jpeg", depois: "/resultados/person5after.jpeg" },
+    {   antes: "/resultados/person6before.jpeg", depois: "/resultados/person6after.jpeg" },
+     {   antes: "/resultados/person7before.jpeg", depois: "/resultados/person7after.jpeg" },
   ];
 
   const viewportRef = useRef(null);
@@ -88,6 +90,8 @@ export default function AntesDepois() {
     ${ex.antes === "/resultados/person3before.jpg" ? "object-[center_10%]" : ""}
      ${ex.antes === "/resultados/person4before.jpg" ? "object-[center_40%]" : ""}
     ${ex.antes === "/resultados/person5before.jpeg" ? "object-[center_20%]" : ""}
+    ${ex.antes === "/resultados/person6before.jpeg" ? "object-[center_20%]" : ""}
+    ${ex.antes === "/resultados/person7before.jpeg" ? "object-[center_5%]" : ""}
   `}
 />
 
@@ -104,6 +108,8 @@ export default function AntesDepois() {
     ${ex.depois === "/resultados/person2after.jpg" ? "object-top" : ""}
     ${ex.depois === "/resultados/person3after.jpg" ? "object-[center_10%]" : ""}
     ${ex.depois === "/resultados/person5after.jpeg" ? "object-[center_20%]" : ""}
+     ${ex.depois === "/resultados/person6after.jpeg" ? "object-[center_10%]" : ""}
+      ${ex.depois === "/resultados/person7after.jpeg" ? "object-[center_10%]" : ""}
   `}
 />
 
