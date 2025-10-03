@@ -86,7 +86,7 @@ export default function AcompanhamentoSection({
       {/* CTA */}
       <div className="mt-10">
         <a
-          href="https://wa.me/5516997572671?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20acompanhamento."
+          href="https://wa.me/5516997572671?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20acompanhamento."
           target="_blank"
           className="inline-flex items-center justify-center gap-2 rounded-xl border border-amber-400 bg-amber-400 px-5 py-3 text-sm font-medium text-black transition hover:bg-transparent hover:text-amber-500/90"
         >

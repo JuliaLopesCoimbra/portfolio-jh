@@ -12,9 +12,9 @@ export default function About() {
    {
   title: "Anamnese Online + Fotos",
   subtitle: [
-    "Pagamento confirmado → acesso imediato ao questionário",<br></br>,
-    "Rotina, treino, sono e preferências → tudo levado em conta",<br></br>,
-    "Fotos do físico → para análise completa",<br></br>,
+    "Pagamento confirmado → acesso imediato ao questionário",
+    "Rotina, treino, sono e preferências → tudo levado em conta",
+    "Fotos do físico → para análise completa",
     "Personalização de verdade começa aqui!",
   ],
   icon: Camera,
@@ -67,7 +67,14 @@ export default function About() {
 
             {/* Subtítulo */}
             <p className="mt-2 text-sm text-neutral-300 leading-relaxed">
-              {subtitle}
+              {Array.isArray(subtitle)
+                ? subtitle.map((line, i) => (
+                    <span key={i}>
+                      {line}
+                      {i !== subtitle.length - 1 && <br />}
+                    </span>
+                  ))
+                : subtitle}
             </p>
 
            

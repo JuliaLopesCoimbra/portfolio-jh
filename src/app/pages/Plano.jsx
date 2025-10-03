@@ -46,10 +46,11 @@ export default function Planos() {
   const periodos = ["Mensal", "Trimestral", "Semestral"];
 
   function waLink(planoTitulo) {
-    const base = "https://wa.me/5516997572671?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20consultoria.";
-    const text = `Olá! Tenho interesse no plano ${planoTitulo} – período ${periodo}. Poderia me enviar os preços e condições?`;
-    return `${base}?text=${encodeURIComponent(text)}`;
-  }
+  const phone = "5516997572671"; 
+  const text = `Olá! Estou interessado na sua consultoria e queria saber mais sobre o ${planoTitulo} – período ${periodo}. Poderia me enviar os preços e condições?`;
+  return `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+}
+
  
 
   return (
