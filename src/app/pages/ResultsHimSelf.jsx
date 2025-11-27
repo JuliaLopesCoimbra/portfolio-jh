@@ -86,11 +86,11 @@ export default function AcompanhamentoSection({
       {/* CTA */}
       <div className="mt-10">
         <a
-          href="https://wa.me/5516997572671?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20acompanhamento."
+          href="https://wa.me/5516996931234?text=Ol%C3%A1%20Jo%C3%A3o!%20Acabei%20de%20dar%20uma%20olhada%20na%20consultoria%2C%20poderia%20me%20contar%20mais%20sobre%20os%20planos%20e%20valores%3F"
           target="_blank"
           className="inline-flex items-center justify-center gap-2 rounded-xl border border-amber-400 bg-amber-400 px-5 py-3 text-sm font-medium text-black transition hover:bg-transparent hover:text-amber-500/90"
         >
-          Falar sobre o acompanhamento
+          Quero saber sobre planos e valores
         </a>
       </div>
     </div>

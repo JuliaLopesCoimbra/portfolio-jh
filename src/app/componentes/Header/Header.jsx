@@ -9,7 +9,7 @@ export default function Header() {
 
   function handleClick() {
     window.open(
-      "https://wa.me/5516997572671?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20consultoria.",
+      "https://wa.me/5516996931234?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20consultoria.",
       "_blank"
     );
   }

@@ -55,7 +55,7 @@ export default function Footer() {
         <div className="flex flex-col gap-3">
           <h4 className="text-sm font-medium text-white">Contato</h4>
           <a
-            href="https://wa.me/5516997572671?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20consultoria."
+            href="https://wa.me/5516996931234?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20consultoria."
             target="_blank"
             className="inline-flex items-center gap-2 hover:text-amber-500/90 transition"
           >
