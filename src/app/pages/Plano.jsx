@@ -47,7 +47,7 @@ export default function Planos() {
 
   function waLink(planoTitulo) {
   const phone = "5516996931234"; 
-  const text = `Olá João! Estou interessado na sua consultoria e queria saber mais sobre o ${planoTitulo} – período ${periodo}. Poderia me enviar os preços e condições?`;
+  const text = `Estou interessado na sua consultoria e queria saber mais sobre o ${planoTitulo} – período ${periodo}. Poderia me enviar os preços e condições?`;
   return `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
 }
 

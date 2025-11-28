@@ -7,11 +7,10 @@ function classNames(...classes) {
 }
 
 function handleClick() {
-   window.open(
-  "https://wa.me/5516996931234?text=Ol%C3%A1%20Jo%C3%A3o!%20Acabei%20de%20dar%20uma%20olhada%20na%20consultoria%2C%20poderia%20me%20contar%20mais%20sobre%20os%20planos%20e%20valores%3F",
+  window.open(
+  "https://wa.me/5516996931234?text=Jo%C3%A3o%2C%20acabei%20de%20dar%20uma%20olhada%20na%20consultoria%2C%20poderia%20me%20contar%20mais%20sobre%20os%20planos%20e%20valores%3F",
   "_blank"
 );
-
   }
 
 
