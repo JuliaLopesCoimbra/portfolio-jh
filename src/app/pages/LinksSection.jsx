@@ -1,5 +1,5 @@
 "use client";
-import { FaYoutube, FaInstagram, FaWhatsapp, FaTiktok } from "react-icons/fa";
+import { FaYoutube, FaInstagram, FaWhatsapp, FaTiktok, FaLock } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
 export default function LinksSection() {
@@ -22,7 +22,7 @@ export default function LinksSection() {
   }, []);
 
   const linkEsquerda = "#";
-  const linkDireita = "#";
+  const linkDireita = "https://forms.gle/vsNuanvwus75VuDH7";
   const linkYouTube = "https://www.youtube.com/@joaovictorherker";
   const linkInstagram = "https://www.instagram.com/joaoherker";
   const linkTikTok = "#";
@@ -50,19 +50,31 @@ export default function LinksSection() {
               backgroundImage: 'url(https://blog.supertechfitness.com.br/wp-content/webp-express/webp-images/uploads/2023/07/equipamentos-nacionais-academia-1024x683.jpeg.webp)',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
+              boxShadow: '0 0 30px rgba(0, 0, 0, 0.8), 0 0 60px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(0, 0, 0, 0.3)',
             }}
           >
             <div className="absolute inset-0 bg-black/90 z-0" />
-            <div className="flex h-20 w-20 sm:h-36 sm:w-36 items-center justify-center transition group-hover:scale-110 flex-shrink-0 relative z-10">
-              <img src="/logo/logo_academy.png" alt="Logo Academy" className="h-full w-full object-contain" />
+            <div className="flex h-40 w-40 sm:h-48 sm:w-48 items-center justify-center transition group-hover:scale-110 flex-shrink-0 relative z-10" >
+              <img src="/logo/logo_academy.png" alt="Logo Academy" className="h-full w-full object-contain"  />
             </div>
             <div className="flex flex-col items-end gap-2 relative z-10">
               <span className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold uppercase text-right leading-tight">
                 ACADEMY<br />PLATFORM
               </span>
-              <button className="bg-amber-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-base sm:text-xl md:text-2xl font-semibold uppercase transition hover:bg-amber-400">
+              <button className="bg-amber-500 text-white px-4 sm:px-5 md:px-4 py-2 sm:py-2.5 md:py-2 rounded-lg text-base sm:text-lg md:text-lg lg:text-xl font-semibold uppercase transition hover:bg-amber-400">
                 Saiba mais
               </button>
+            </div>
+            {/* Sombra de fundo escura - acima do conteúdo mas abaixo do cadeado */}
+            <div className="absolute inset-0 bg-black/70 z-30 pointer-events-none" style={{
+              boxShadow: 'inset 0 0 100px rgba(0, 0, 0, 0.9), inset 0 0 200px rgba(0, 0, 0, 1.5)',
+            }} />
+            {/* Ícone de cadeado por cima de tudo */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center z-50 pointer-events-none gap-3 sm:gap-4">
+              <FaLock className="text-amber-500 text-7xl sm:text-8xl md:text-9xl opacity-90" />
+              <span className="text-white text-xl sm:text-2xl md:text-3xl font-semibold uppercase opacity-90">
+                em breve
+              </span>
             </div>
           </a>
 
@@ -79,18 +91,18 @@ export default function LinksSection() {
             }}
           >
             <div className="absolute inset-0 bg-black/90 z-0" />
-            <div className="flex h-20 w-20 sm:h-36 sm:w-36 items-center justify-center transition group-hover:scale-110 flex-shrink-0 relative z-10">
+            <div className="flex h-40 w-40 sm:h-48 sm:w-48 items-center justify-center transition group-hover:scale-110 flex-shrink-0 relative z-10" >
               <img src="/logo/logo_transparente.png" alt="Logo" className="h-full w-full object-contain" />
             </div>
-            <div className="flex flex-col items-end gap-2 relative z-10">
-              <span className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold uppercase text-right leading-tight">
-               MINHA CONSULTORIA INDIVIDUAL 
+            <div className="flex flex-col items-end gap-1.5 sm:gap-2 relative z-10 flex-1 min-w-0" >
+              <span className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold uppercase text-right leading-tight">
+               MINHA CONSULTORIA<br />INDIVIDUAL 
               </span>
-              <span className="text-gray-400 text-base sm:text-lg md:text-xl lg:text-2xl font-semibold uppercase text-right leading-tight">
+              <span className="text-gray-400 text-sm sm:text-base md:text-lg lg:text-xl font-semibold uppercase text-right leading-tight">
               FORMULARIO DE<br />PRÉ SELEÇÃO
               </span>
               
-              <button className="bg-amber-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-base sm:text-xl md:text-2xl font-semibold uppercase transition hover:bg-amber-400">
+              <button className="bg-amber-500 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-sm sm:text-base md:text-lg font-semibold uppercase transition hover:bg-amber-400">
                 Saiba mais
               </button>
             </div>

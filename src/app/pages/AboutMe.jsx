@@ -22,7 +22,8 @@ export default function AboutMe() {
             <img
               src="/jh/joaoBusiness.jpg"
               alt="João Herker"
-              className="w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full object-cover object-top border-t-2 border-b-2 border-amber-500 shadow-xl animate-float"
+              className="w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full object-cover border-t-2 border-b-2 border-amber-500 shadow-xl animate-float"
+              style={{ objectPosition: 'center 30%' }}
             />
           </div>
         </div>

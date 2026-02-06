@@ -15,10 +15,9 @@ export default function Home() {
   );
 }
 
-//aumentar o tamanho das logos dentro dos blocos
 //link titkok
-//link dos blocos
-//cadeado na plataforma
-//foto começar mais pra baixo e por uma luz
+
+
+
 
 
