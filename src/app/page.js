@@ -1,33 +1,24 @@
-import Header from "./componentes/Header/Header";
-import About from "./pages/About";
-import Principal from "./pages/Principal";
-import Relatos from "./pages/Relatos";
-import Resultados from "./pages/Resultados";
-import Video from "./pages/Video";
-import Duvidas from "./pages/Duvidas";
-import Planos from "./pages/Plano";
-import Footer from "./pages/Footer";
-import More from "./pages/More";
-import AcompanhamentoSection from "./pages/ResultsHimSelf";
+import LinksSection from "./pages/LinksSection";
+import AboutMe from "./pages/AboutMe";
+import AnimateOnScroll from "./componentes/AnimateOnScroll/AnimateOnScroll";
 
 export default function Home() {
   return (
     <>
-      <Header />
-      <main className="pt-16">
-        <Principal />
-        <Video />
-        <AcompanhamentoSection />
-        <About />
-        <More />
-        <Relatos />
-        <Resultados />
-        <Planos />
-        <Duvidas />
-        <Footer />
-      </main>
+      <AnimateOnScroll delay={0}>
+        <AboutMe />
+      </AnimateOnScroll>
+      <AnimateOnScroll delay={100}>
+        <LinksSection />
+      </AnimateOnScroll>
     </>
   );
 }
 
-//colocar video
+//aumentar o tamanho das logos dentro dos blocos
+//link titkok
+//link dos blocos
+//cadeado na plataforma
+//foto começar mais pra baixo e por uma luz
+
+
