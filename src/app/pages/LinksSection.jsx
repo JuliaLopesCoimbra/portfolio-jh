@@ -47,33 +47,29 @@ export default function LinksSection() {
             rel="noopener noreferrer"
             className={`group relative flex flex-row items-center justify-between gap-3 sm:gap-6 rounded-2xl border border-amber-500 p-4 sm:p-8 min-h-40 sm:min-h-48 shadow-2xl transition hover:scale-[1.01] overflow-hidden fade-in-up ${visibleItems.leftBlock ? "visible" : ""}`}
             style={{
-              backgroundImage: 'url(https://blog.supertechfitness.com.br/wp-content/webp-express/webp-images/uploads/2023/07/equipamentos-nacionais-academia-1024x683.jpeg.webp)',
+              backgroundImage: 'url(/FUNDOBLOCO/bloco_esquerda.jpeg)',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               boxShadow: '0 0 30px rgba(0, 0, 0, 0.8), 0 0 60px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(0, 0, 0, 0.3)',
             }}
           >
-            <div className="absolute inset-0 bg-black/90 z-0" />
+            <div className="absolute inset-0 bg-black/70 z-0" />
             <div className="flex h-40 w-40 sm:h-48 sm:w-48 items-center justify-center transition group-hover:scale-110 flex-shrink-0 relative z-10" >
               <img src="/logo/logo_academy.png" alt="Logo Academy" className="h-full w-full object-contain"  />
             </div>
             <div className="flex flex-col items-end gap-2 relative z-10">
               <span className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold uppercase text-right leading-tight">
-                ACADEMY<br />PLATFORM
+                JC<br />ACADEMY
               </span>
               <button className="bg-amber-500 text-white px-4 sm:px-5 md:px-4 py-2 sm:py-2.5 md:py-2 rounded-lg text-base sm:text-lg md:text-lg lg:text-xl font-semibold uppercase transition hover:bg-amber-400">
                 Saiba mais
               </button>
             </div>
-            {/* Sombra de fundo escura - acima do conteúdo mas abaixo do cadeado */}
-            <div className="absolute inset-0 bg-black/70 z-30 pointer-events-none" style={{
-              boxShadow: 'inset 0 0 100px rgba(0, 0, 0, 0.9), inset 0 0 200px rgba(0, 0, 0, 1.5)',
-            }} />
-            {/* Ícone de cadeado por cima de tudo */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center z-50 pointer-events-none gap-3 sm:gap-4">
-              <FaLock className="text-amber-500 text-7xl sm:text-8xl md:text-9xl opacity-90" />
-              <span className="text-white text-xl sm:text-2xl md:text-3xl font-semibold uppercase opacity-90">
-                em breve
+            {/* Overlay escuro na parte inferior com cadeado e "em breve" */}
+            <div className="absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-sm z-50 pointer-events-none flex items-center justify-center gap-2 sm:gap-3 py-2 sm:py-3">
+              <FaLock className="text-amber-500 text-lg sm:text-xl md:text-2xl opacity-90" />
+              <span className="text-white text-sm sm:text-base md:text-lg font-semibold uppercase opacity-90">
+                Em breve!
               </span>
             </div>
           </a>
@@ -85,15 +81,17 @@ export default function LinksSection() {
             rel="noopener noreferrer"
             className={`group relative flex flex-row items-center justify-between gap-3 sm:gap-6 rounded-2xl border border-amber-500 p-4 sm:p-8 min-h-40 sm:min-h-48 shadow-2xl transition hover:scale-[1.01] overflow-hidden fade-in-up ${visibleItems.rightBlock ? "visible" : ""}`}
             style={{
-              backgroundImage: 'url(https://tecnofit-site.s3.sa-east-1.amazonaws.com/media/files/2023/10/20160631/layout-para-academia-2048x1367.jpg)',
+              backgroundImage: 'url(/FUNDOBLOCO/bloco_direita.jpeg)',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
           >
-            <div className="absolute inset-0 bg-black/90 z-0" />
-            <div className="flex h-40 w-40 sm:h-48 sm:w-48 items-center justify-center transition group-hover:scale-110 flex-shrink-0 relative z-10" >
-              <img src="/logo/logo_transparente.png" alt="Logo" className="h-full w-full object-contain" />
+            <div className="absolute inset-0 bg-black/70 z-0" />
+            <div className="flex flex-col h-40 w-40 sm:h-48 sm:w-48 items-center justify-center transition group-hover:scale-110 flex-shrink-0 relative z-10 gap-2" >
+              <img src="/logo/logo_transparente.png" alt="Logo" className="h-1/2 w-full object-contain" />
+              <img src="/logo/logo-no-image.png" alt="Logo" className="h-1/2 w-full object-contain" />
             </div>
+            
             <div className="flex flex-col items-end gap-1.5 sm:gap-2 relative z-10 flex-1 min-w-0" >
               <span className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold uppercase text-right leading-tight">
                MINHA CONSULTORIA<br />INDIVIDUAL 
