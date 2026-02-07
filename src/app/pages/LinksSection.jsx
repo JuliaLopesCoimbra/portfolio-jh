@@ -21,7 +21,6 @@ export default function LinksSection() {
     };
   }, []);
 
-  const linkEsquerda = "#";
   const linkDireita = "https://forms.gle/vsNuanvwus75VuDH7";
   const linkYouTube = "https://www.youtube.com/@joaovictorherker";
   const linkInstagram = "https://www.instagram.com/joaoherker";
@@ -41,11 +40,8 @@ export default function LinksSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           
           {/* Bloco Esquerda - BORDAS RESTAURADAS */}
-          <a
-            href={linkEsquerda}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`group relative flex flex-row items-center justify-between gap-3 sm:gap-6 rounded-2xl border border-amber-500 p-4 sm:p-8 min-h-40 sm:min-h-48 shadow-2xl transition hover:scale-[1.01] overflow-hidden fade-in-up ${visibleItems.leftBlock ? "visible" : ""}`}
+          <div
+            className={`group relative flex flex-row items-center justify-between gap-3 sm:gap-6 rounded-2xl border border-amber-500 p-4 sm:p-8 min-h-40 sm:min-h-48 shadow-2xl transition overflow-hidden fade-in-up cursor-default ${visibleItems.leftBlock ? "visible" : ""}`}
             style={{
               backgroundImage: 'url(/FUNDOBLOCO/bloco_esquerda.jpeg)',
               backgroundSize: 'cover',
@@ -72,7 +68,7 @@ export default function LinksSection() {
                 Em breve!
               </span>
             </div>
-          </a>
+          </div>
 
           {/* Bloco Direita - BORDAS RESTAURADAS */}
           <a
