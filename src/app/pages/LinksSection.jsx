@@ -24,7 +24,7 @@ export default function LinksSection() {
   const linkDireita = "https://forms.gle/vsNuanvwus75VuDH7";
   const linkYouTube = "https://www.youtube.com/@joaovictorherker";
   const linkInstagram = "https://www.instagram.com/joaoherker";
-  const linkTikTok = "#";
+  const linkTikTok = "https://www.tiktok.com/@joa0herker?is_from_webapp=1&sender_device=pc";
   const linkWhatsApp = "https://wa.me/5516996931234?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20consultoria.";
 
   return (
@@ -114,9 +114,9 @@ export default function LinksSection() {
           <a href={linkTikTok} target="_blank" className="text-amber-500 hover:text-amber-400 transition hover:scale-110">
             <FaTiktok className="text-5xl sm:text-6xl" />
           </a>
-          <a href={linkWhatsApp} target="_blank" className="text-amber-500 hover:text-amber-400 transition hover:scale-110">
+          {/* <a href={linkWhatsApp} target="_blank" className="text-amber-500 hover:text-amber-400 transition hover:scale-110">
             <FaWhatsapp className="text-5xl sm:text-6xl" />
-          </a>
+          </a> */}
         </div>
       </div>
       
