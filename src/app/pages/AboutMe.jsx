@@ -49,7 +49,7 @@ export default function AboutMe() {
 
         {/* Texto */}
         <p className="text-base sm:text-xl md:text-2xl text-neutral-200 leading-relaxed max-w-3xl mx-auto mb-6 sm:mb-12">
-        João Herker, nutricionista e preparador de atletas, dedicado à construção de resultados de alto nível.
+        João Herker, preparador de atletas, dedicado à construção de resultados de alto nível.
         </p>
         <p 
           className="text-base sm:text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto mb-6 sm:mb-12 font-semibold"
