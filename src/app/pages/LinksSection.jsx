@@ -1,5 +1,5 @@
 "use client";
-import { FaYoutube, FaInstagram, FaWhatsapp, FaTiktok, FaLock } from "react-icons/fa";
+import { FaYoutube, FaInstagram, FaTiktok } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
 export default function LinksSection() {
@@ -22,6 +22,7 @@ export default function LinksSection() {
   }, []);
 
   const linkDireita = "https://forms.gle/vsNuanvwus75VuDH7";
+  const linkEsquerda = "https://www.academyjc.com.br";
   const linkYouTube = "https://www.youtube.com/@joaovictorherker";
   const linkInstagram = "https://www.instagram.com/joaoherker";
   const linkTikTok = "https://www.tiktok.com/@joa0herker?is_from_webapp=1&sender_device=pc";
@@ -40,8 +41,11 @@ export default function LinksSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           
           {/* Bloco Esquerda - BORDAS RESTAURADAS */}
-          <div
-            className={`group relative flex flex-row items-center justify-between gap-3 sm:gap-6 rounded-2xl border border-amber-500 p-4 sm:p-8 min-h-40 sm:min-h-48 shadow-2xl transition overflow-hidden fade-in-up cursor-default ${visibleItems.leftBlock ? "visible" : ""}`}
+          <a
+            href={linkEsquerda}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`group relative flex flex-row items-center justify-between gap-3 sm:gap-6 rounded-2xl border border-amber-500 p-4 sm:p-8 min-h-40 sm:min-h-48 shadow-2xl transition hover:scale-[1.01] overflow-hidden fade-in-up ${visibleItems.leftBlock ? "visible" : ""}`}
             style={{
               backgroundImage: 'url(/FUNDOBLOCO/bloco_esquerda.jpeg)',
               backgroundSize: 'cover',
@@ -61,14 +65,7 @@ export default function LinksSection() {
                 Saiba mais
               </button>
             </div>
-            {/* Overlay escuro na parte inferior com cadeado e "em breve" */}
-            <div className="absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-sm z-50 pointer-events-none flex items-center justify-center gap-2 sm:gap-3 py-2 sm:py-3">
-              <FaLock className="text-amber-500 text-lg sm:text-xl md:text-2xl opacity-90" />
-              <span className="text-white text-sm sm:text-base md:text-lg font-semibold uppercase opacity-90">
-                Em breve!
-              </span>
-            </div>
-          </div>
+          </a>
 
           {/* Bloco Direita - BORDAS RESTAURADAS */}
           <a
