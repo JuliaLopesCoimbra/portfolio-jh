@@ -21,7 +21,7 @@ export default function LinksSection() {
     };
   }, []);
 
-  const linkDireita = "https://forms.gle/vsNuanvwus75VuDH7";
+  const linkDireita = "https://inlead.digital/jh-team-formulario-de-aplicacao";
   const linkEsquerda = "https://www.academyjc.com.br";
   const linkYouTube = "https://www.youtube.com/@joaovictorherker";
   const linkInstagram = "https://www.instagram.com/joaoherker";
