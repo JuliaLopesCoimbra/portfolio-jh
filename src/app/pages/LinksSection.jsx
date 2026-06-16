@@ -4,25 +4,21 @@ import { useEffect, useState } from "react";
 
 export default function LinksSection() {
   const [visibleItems, setVisibleItems] = useState({
-    leftBlock: false,
     rightBlock: false,
     socialIcons: false,
   });
 
   useEffect(() => {
-    const timer1 = setTimeout(() => setVisibleItems(prev => ({ ...prev, leftBlock: true })), 100);
-    const timer2 = setTimeout(() => setVisibleItems(prev => ({ ...prev, rightBlock: true })), 300);
-    const timer3 = setTimeout(() => setVisibleItems(prev => ({ ...prev, socialIcons: true })), 500);
+    const timer1 = setTimeout(() => setVisibleItems(prev => ({ ...prev, rightBlock: true })), 100);
+    const timer2 = setTimeout(() => setVisibleItems(prev => ({ ...prev, socialIcons: true })), 300);
 
     return () => {
       clearTimeout(timer1);
       clearTimeout(timer2);
-      clearTimeout(timer3);
     };
   }, []);
 
   const linkDireita = "https://inlead.digital/jh-team-formulario-de-aplicacao";
-  const linkEsquerda = "https://www.academyjc.com.br";
   const linkYouTube = "https://www.youtube.com/@joaovictorherker";
   const linkInstagram = "https://www.instagram.com/joaoherker";
   const linkTikTok = "https://www.tiktok.com/@joa0herker?is_from_webapp=1&sender_device=pc";
@@ -38,36 +34,8 @@ export default function LinksSection() {
       }} />
 
       <div className="relative z-10 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-          
-          {/* Bloco Esquerda - BORDAS RESTAURADAS */}
-          <a
-            href={linkEsquerda}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`group relative flex flex-row items-center justify-between gap-3 sm:gap-6 rounded-2xl border border-amber-500 p-4 sm:p-8 min-h-40 sm:min-h-48 shadow-2xl transition hover:scale-[1.01] overflow-hidden fade-in-up ${visibleItems.leftBlock ? "visible" : ""}`}
-            style={{
-              backgroundImage: 'url(/FUNDOBLOCO/bloco_esquerda.jpeg)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              boxShadow: '0 0 30px rgba(0, 0, 0, 0.8), 0 0 60px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(0, 0, 0, 0.3)',
-            }}
-          >
-            <div className="absolute inset-0 bg-black/70 z-0" />
-            <div className="flex h-40 w-40 sm:h-48 sm:w-48 items-center justify-center transition group-hover:scale-110 flex-shrink-0 relative z-10" >
-              <img src="/logo/logo_academy.png" alt="Logo Academy" className="h-full w-full object-contain"  />
-            </div>
-            <div className="flex flex-col items-end gap-2 relative z-10">
-              <span className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold uppercase text-right leading-tight">
-                JC<br />ACADEMY
-              </span>
-              <button className="bg-amber-500 text-white px-4 sm:px-5 md:px-4 py-2 sm:py-2.5 md:py-2 rounded-lg text-base sm:text-lg md:text-lg lg:text-xl font-semibold uppercase transition hover:bg-amber-400">
-                Saiba mais
-              </button>
-            </div>
-          </a>
-
-          {/* Bloco Direita - BORDAS RESTAURADAS */}
+        <div>
+          {/* Bloco Consultoria */}
           <a
             href={linkDireita}
             target="_blank"
