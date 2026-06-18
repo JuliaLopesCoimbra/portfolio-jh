@@ -18,7 +18,7 @@ export default function LinksSection() {
     };
   }, []);
 
-  const linkDireita = "https://inlead.digital/jh-team-formulario-de-aplicacao";
+  const linkDireita = "https://form.jhteam.com.br/";
   const linkYouTube = "https://www.youtube.com/@joaovictorherker";
   const linkInstagram = "https://www.instagram.com/joaoherker";
   const linkTikTok = "https://www.tiktok.com/@joa0herker?is_from_webapp=1&sender_device=pc";
